@@ -1,0 +1,13 @@
+{
+  "name": "Roue",
+  "version": "0.0.1",
+  "description": "React wheel",
+  "main": "index.js",
+  "repository": "git@github.com:mattisonzhao/Roue.git",
+  "author": "mattisonZhao <mattison@yeah.net>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
