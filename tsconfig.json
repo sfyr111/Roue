@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "dist",   //output menu
     "declaration": true,
     "baseUrl": ".",
     "module": "esnext",
