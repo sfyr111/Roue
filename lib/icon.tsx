@@ -1,5 +1,6 @@
 import * as React from "react";
-import "../icons/alipay.svg"
+import  "./importicons"
+
 interface IconProps {
     name: string;
 }

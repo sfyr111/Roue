@@ -22,7 +22,7 @@
     "noUnusedLocals": true
   },
   "include": [
-    "types/**/*",
+    "lib/types/**/*",
     "lib/**/*"
   ],
   "exclude": [
