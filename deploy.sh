@@ -1,6 +1,5 @@
 #patch
 #minor
 #major
-
-yarn version $1 && \
+yarn version --$1 && \
 git push
