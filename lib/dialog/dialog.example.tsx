@@ -10,9 +10,14 @@ export default function () {
                 setX(!x)
             }}>click
             </button>
-            <Dialog visible={x}>
+            <Dialog visible={x} buttons={
+                [
+                    <button onClick={()=>{setX(false)}}> cancle </button>,
+                    <button onClick={()=>{}}> ok </button>
+                ]
+            } onClose={(setX(false))}>
                 <div>
-                   <strong>HI</strong> 
+                   <strong>HI</strong>
                 </div>
             </Dialog>
         </div>
