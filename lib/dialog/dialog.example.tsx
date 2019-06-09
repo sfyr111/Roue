@@ -15,7 +15,9 @@ export default function () {
                     <button onClick={()=>{setX(false)}}> cancle </button>,
                     <button onClick={()=>{}}> ok </button>
                 ]
-            } onClose={(setX(false))}>
+            } onClose={()=>{setX(false);}}
+                closeOnClickMask={true}
+            >
                 <div>
                    <strong>HI</strong>
                 </div>
