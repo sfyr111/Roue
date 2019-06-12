@@ -3,7 +3,7 @@ import './dialog.scss';
 import '../index.tsx'
 import {Fragment, ReactElement, ReactNode} from 'react';
 import * as ReactDom from 'react-dom'
-import {scopedClassMaker} from "../classes";
+import {scopedClassMaker} from "../helper/classes";
 
 
 interface Props {

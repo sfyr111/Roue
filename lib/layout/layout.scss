@@ -10,7 +10,7 @@
   & &{
     flex-grow: 1;
   }
-}
-.hasAside{
-  flex-direction: row;
+  &-hasAside{
+      flex-direction: row;
+  }
 }

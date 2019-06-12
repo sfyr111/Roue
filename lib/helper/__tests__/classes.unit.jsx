@@ -1,4 +1,4 @@
-import Classes from '../classes'
+import Classes, {scopedClassMaker} from '../classes'
 describe('classes', () => {
     it('accept one ClassName', () => {
         const result = Classes("a");
@@ -19,5 +19,17 @@ describe('classes', () => {
     it('accept none ClassName', () => {
         const result = Classes("");
         expect(result).toEqual("")
+    })
+});
+
+
+describe('scopedClassMaker', () => {
+    it('接受字符串或对象',()=>{
+        const sc = scopedClassMaker("roue-layout");
+        expect(sc("")).toEqual("roue-layout");
+        expect(sc("x")).toEqual("roue-layout-x");
+        expect(sc({y:true,x:false})).toEqual("roue-layout-y");
+        expect(sc({y:true,x:true})).toEqual("roue-layout-y roue-layout-x");
+        expect(sc({x:true},{extra:""})).toEqual("roue-layout-x");
     })
 });
