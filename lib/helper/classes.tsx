@@ -1,3 +1,4 @@
+
 function classes(...names: (string | undefined)[]) {
     return names.filter(Boolean).join(' ');
 }
@@ -5,31 +6,22 @@ function classes(...names: (string | undefined)[]) {
 export default classes;
 
 interface Option {
-    extra:string | undefined
-}
-interface ClassToggles  {
-    [K:string]:boolean
+    extra: string | undefined
 }
 
-function scopedClassMaker(prefix:string) {
-
-    return (name?:string |ClassToggles ,option?:Option)=> {
-        let name2;
-        let result;
-        if(typeof name === 'string'|| name ===undefined){
-            name2 = name;
-            result = [prefix, name2].filter(Boolean).join("-");
-        }else{
-            name2 = Object.entries(name).filter(kv => kv[1]).map(kv=>kv[0]);
-            result = name2.map(n=>[prefix,n].filter(Boolean).join("-")).join(" ");
-        }
-
-        if(option&&option.extra) {
-            return [result,option&&option.extra ].filter(Boolean).join(" ");
-        }else{
-            return result;
-        }
-    }
+interface ClassToggles {
+    [K: string]: boolean
 }
+
+const scopedClassMaker = (prefix: string) =>
+    (name: string | ClassToggles, option?: Option) =>
+        Object.entries((name instanceof Object ? name : {[name]: name}))
+            .filter(kv => kv[1] !== false)
+            .map(kv => kv[0])
+            .map(name => [prefix, name]
+                .filter(Boolean)
+                .join("-"))
+            .concat(option && option.extra || [])
+            .join(" ");
 
 export {scopedClassMaker}

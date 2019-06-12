@@ -9,7 +9,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
     children: ReactElement | Array<ReactElement>
 }
 
-const x:React.FunctionComponent<Props>= (props)=>{
+const Layout:React.FunctionComponent<Props>= (props)=>{
     const {className , ...rest } = props;
     const children = props.children as Array<ReactElement>;
     const hasAside = 'length' in children &&
@@ -20,4 +20,9 @@ const x:React.FunctionComponent<Props>= (props)=>{
         </div>
     )
 };
-export default  x
+export default  Layout ;
+export { Layout };
+export {default as Header} from "./header";
+export {default as Content} from "./content";
+export {default as Footer} from "./footer";
+export {default as Aside} from "./aside";

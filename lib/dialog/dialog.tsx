@@ -30,7 +30,7 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
         <Fragment>
             <div className={sc('mask')} onClick={closeMask}>
             </div>
-            <div className={sc()}>
+            <div className={sc("")}>
                 <header className={sc('header')}>
                     提 醒！
                 </header>
