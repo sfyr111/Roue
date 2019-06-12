@@ -6,15 +6,13 @@ import ButtonExample from "./lib/button/button.example";
 import DialogExample from "./lib/dialog/dialog.example";
 import LayoutExample from "./lib/layout/layout.example";
 import {Layout,Header,Footer,Content,Aside} from "./lib/layout/layout";
+const logo = require('./logo.png');
 
 ReactDom.render(
     <Router>
         <Layout>
             <Header>
-                <div className="logo">
-                    FUI
-                </div>
-
+                <img src={logo} alt="Logo"/>
             </Header>
             <Layout>
                 <Aside>

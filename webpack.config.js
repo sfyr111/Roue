@@ -18,13 +18,17 @@ module.exports = {
                 loader: 'awesome-typescript-loader'
             },
             {
-                test:/\.svg$/,
+                test: /\.svg$/,
                 loader: 'svg-sprite-loader'
             },
             {
-                test:/\.s([ac])ss$/,
-                use:['style-loader','css-loader','sass-loader']
+                test: /\.s([ac])ss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/,
+                use: [{loader: 'file-loader', options: {}}]
             }
         ]
     },
-}
+};
