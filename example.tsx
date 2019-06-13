@@ -1,46 +1,59 @@
 import * as React from 'react'
 import * as ReactDom from 'react-dom'
-import {HashRouter as Router, Route , Link} from 'react-router-dom'
+import {HashRouter as Router, Route, NavLink} from 'react-router-dom'
 import IconExample from "./lib/icon/icon.example";
 import ButtonExample from "./lib/button/button.example";
 import DialogExample from "./lib/dialog/dialog.example";
 import LayoutExample from "./lib/layout/layout.example";
-import {Layout,Header,Footer,Content,Aside} from "./lib/layout/layout";
+import {Layout, Header, Footer, Content, Aside} from "./lib/layout/layout";
+
 const logo = require('./logo.png');
+import "./example.scss"
+import {Icon} from "./lib";
 
 ReactDom.render(
     <Router>
         <Layout>
-            <Header>
+            <Header className={"example-header"}>
                 <img src={logo} alt="Logo"/>
+                <span>Roue</span>
+                <div className={"example-headerIcons"}>
+                    <a href="https://github.com/mattisonzhao/Roue">
+                        <Icon name={"github"}/>
+                    </a>
+                </div>
             </Header>
-            <Layout>
-                <Aside>
-                    <h2>组件</h2>
-                    <ul>
-                        <li>
-                            <Link to="/icon">Icon</Link>
-                        </li>
-                        <li>
-                            <Link to="/button">Button</Link>
-                        </li>
-                        <li>
-                            <Link to="/dialog">对话框</Link>
-                        </li>
-                        <li>
-                            <Link to="/layout">布局</Link>
-                        </li>
-                    </ul>
+            <Layout className={"example-main"}>
+                <Aside className={"example-aside"}>
+                    <div className={"example-asideWrapper"}>
+                        <p className={"example-asideLogo"}>Roue-UI <br/>
+                            v0.1.1</p>
+                        <p className={"example-asideLable"}>Components</p>
+                        <ul>
+                            <li>
+                                <NavLink to="/icon">Icon</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/button">Button</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dialog">Dialog</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/layout">Layout</NavLink>
+                            </li>
+                        </ul>
+                    </div>
                 </Aside>
-                <Content>
+                <Content className={"example-content"}>
                     <Route path="/icon" component={IconExample}/>
                     <Route path="/button" component={ButtonExample}/>
                     <Route path="/dialog" component={DialogExample}/>
                     <Route path="/layout" component={LayoutExample}/>
                 </Content>
             </Layout>
-            <Footer>
-
+            <Footer className={"example-footer"}>
+                <span>©Mattison </span>
             </Footer>
         </Layout>
     </Router>

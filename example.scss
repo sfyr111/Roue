@@ -1,0 +1,30 @@
+*{ margin: 0; padding: 0; box-sizing: border-box ;}
+*:after,*:before{ box-sizing: border-box; }
+ul,ol{list-style: none}
+a{text-decoration: none}
+.example-{
+  font-weight: normal;
+  &main{ min-height: 100vh;
+    margin-top: 55px; }
+  &header{ font-size: 18px; font-family: "Arial Black", Helvetica, monospace ; font-weight: 600 ; display: flex;
+    align-items: center; background: #FFFFFF; position: fixed;width: 100%; overflow: hidden; border-bottom: 1px solid  #EEEEEE;
+    >img{ height: 55px; margin: 0 5px; }
+    &Icons{margin-left: auto; margin-right: 10px;
+      >svg{ cursor: pointer; margin: 0 10px; }
+    }
+  }
+  &aside{
+    color: white; min-width: 230px; font-size: 14px; font-family: "Roboto", "Helvetica", "Arial", sans-serif; box-shadow: #eeeeee 1px 1px 1px ;
+    &Wrapper{
+      height: 100%; background: black; border-top-right-radius:85%; overflow: hidden;
+      >ul>li>a.active{ color: black;font-weight: bold; transition: 0.3s; background: #ccc; border-radius: 4px; }
+      >ul>li>a:hover{ color: black;transition: 0.3s; background: #ccc; border-radius: 4px; }
+      >ul>li>a{ color: white; display: block; padding: 10px 0 10px 20px; }
+    }
+    &Logo{padding:15px 10px; font-weight: 600; letter-spacing: 1px; margin-top: 15px;}
+    &Lable{ font-weight: 600; padding:15px 10px;}
+  }
+  &content{ padding: 15px;}
+  &footer{ font-size: 14px; display: flex; justify-content: center; }
+}
+

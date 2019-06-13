@@ -2,11 +2,17 @@ import * as React from "react";
 import {scopedClassMaker} from "../helper/classes";
 const sc = scopedClassMaker("roue-layout");
 
-const content:React.FunctionComponent= (props)=>{
+const sc = scopedClassMaker('roue-layout');
+interface Props extends React.HTMLAttributes<HTMLElement> {
+}
+
+const Content:React.FunctionComponent<Props>= (props)=>{
+
+    const {className, ...rest} = props;
     return (
-        <div className={sc("content")}>
+        <div className={sc("content",{extra:className})} {...rest}>
             {props.children}
         </div>
     )
 };
-export default  content
+export default  Content
