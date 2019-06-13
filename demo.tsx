@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Highlight, {defaultProps} from "prism-react-renderer";
 import {useState} from 'react';
+import {Icon} from "./lib";
 
 interface Props {
     code:string
@@ -8,6 +9,7 @@ interface Props {
 
 const Demo:React.FunctionComponent<Props>=(props)=>{
     const [codeVisible,setCodeVisible] =useState(false);
+    const [IconState , setIconState] = useState(false)
     const code =(
         <Highlight {...defaultProps} code={props.code} language="jsx">
             {({className, style, tokens, getLineProps, getTokenProps}) => (
@@ -29,7 +31,11 @@ const Demo:React.FunctionComponent<Props>=(props)=>{
                 {props.children}
             </div>
             <div>
-                <button onClick={() => setCodeVisible(!codeVisible)}>查看代码</button>
+                <Icon className={"IconTrigger"} name={IconState?"code":"code.off"}
+                      onClick={() => {
+                          setCodeVisible(!codeVisible);
+                          setIconState(!IconState);
+                      }}>查看代码</Icon>
                 {codeVisible && code}
             </div>
         </div>

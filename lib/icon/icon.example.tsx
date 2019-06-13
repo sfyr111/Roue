@@ -4,6 +4,7 @@ import Icon from "./icon";
 
 const IconExample  = ()=>{
     return (
+
         <Icon name={"alipay"}/>
     )
 };

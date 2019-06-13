@@ -2,7 +2,7 @@ import IconExample from '../icon.example';
 import * as React  from 'react';
 import Demo from '../../../demo';
 import {Fragment} from 'react';
-
+import "./icon.demo.scss"
 
 const IconDemo = ()=>{
     return(
