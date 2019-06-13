@@ -8,13 +8,14 @@ a{text-decoration: none}
     margin-top: 55px; }
   &header{ font-size: 18px; font-family: "Arial Black", Helvetica, monospace ; font-weight: 600 ; display: flex;
     align-items: center; background: #FFFFFF; position: fixed;width: 100%; overflow: hidden; border-bottom: 1px solid  #EEEEEE;
-    >img{ height: 55px; margin: 0 5px; }
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    >img{ height: 55px; margin: 0 20px; }
     &Icons{margin-left: auto; margin-right: 10px;
       >svg{ cursor: pointer; margin: 0 10px; }
     }
   }
   &aside{
-    color: white; min-width: 230px; font-size: 14px; font-family: "Roboto", "Helvetica", "Arial", sans-serif; box-shadow: #eeeeee 1px 1px 1px ;
+    color: white; min-width: 230px; font-size: 14px; font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     &Wrapper{
       height: 100%; background: black; border-top-right-radius:85%; overflow: hidden;
       >ul>li>a.active{ color: black;font-weight: bold; transition: 0.3s; background: #ccc; border-radius: 4px; }
