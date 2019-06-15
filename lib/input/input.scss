@@ -1,0 +1,19 @@
+@import "../helper";
+
+.roue-input{
+  padding: 9.5px 14px;
+  line-height: 1em;
+  letter-spacing: normal;
+  word-spacing: normal;
+  font: 400 100% Arial;
+  border-radius: 4px;
+  border: 1px solid $main-border-color ;
+   &:focus{
+    outline: none;
+     border: 1px solid $main-focus-color;
+  }
+  &-focus{
+    border: 1px solid $main-focus-color;
+
+  }
+}

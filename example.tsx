@@ -5,11 +5,13 @@ import ButtonExample from "./lib/button/button.example";
 import DialogExample from "./lib/dialog/dialog.example";
 import LayoutExample from "./lib/layout/layout.example";
 import {Layout, Header, Footer, Content, Aside} from "./lib/layout/layout";
-
+import ContainerExample from "./lib/container/container.example"
+import InputDemo from "./lib/input/demo/input.demo"
 const logo = require('./logo.png');
 import "./example.scss"
 import {Icon} from "./lib";
 import IconDemo from "./lib/icon/demo/icon.demo";
+import Container from "./lib/container/container";
 
 ReactDom.render(
     <Router>
@@ -34,6 +36,9 @@ ReactDom.render(
                                 <NavLink to="/icon">Icon</NavLink>
                             </li>
                             <li>
+                                <NavLink to="/input">Input</NavLink>
+                            </li>
+                            <li>
                                 <NavLink to="/button">Button</NavLink>
                             </li>
                             <li>
@@ -41,6 +46,9 @@ ReactDom.render(
                             </li>
                             <li>
                                 <NavLink to="/layout">Layout</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/container">Container</NavLink>
                             </li>
                         </ul>
                     </div>
@@ -50,7 +58,14 @@ ReactDom.render(
                     <Route path="/button" component={ButtonExample}/>
                     <Route path="/dialog" component={DialogExample}/>
                     <Route path="/layout" component={LayoutExample}/>
+                    <Route path="/input" component={InputDemo}/>
+                    <Route path="/container" component={ContainerExample}/>
                 </Content>
+                <Aside className={"example-asideRight"}>
+                    <Container className={"example-asideRight-card"}>
+                        <p>Hello ♥</p>
+                    </Container>
+                </Aside>
             </Layout>
             <Footer className={"example-footer"}>
                 <span>©Mattison </span>

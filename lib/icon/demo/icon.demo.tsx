@@ -1,13 +1,12 @@
-import IconExample from '../icon.example';
+import IconExample from './icon.example';
 import * as React  from 'react';
 import Demo from '../../../demo';
 import {Fragment} from 'react';
-import "./icon.demo.scss"
 
 const IconDemo = ()=>{
     return(
         <Fragment>
-            <Demo code={require('!!raw-loader!../icon.example.tsx').default}>
+            <Demo code={require('!!raw-loader!./icon.example.tsx').default}>
                 <IconExample/>
             </Demo>
         </Fragment>

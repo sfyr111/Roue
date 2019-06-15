@@ -4,13 +4,13 @@ import {useState} from 'react';
 import {Icon} from "./lib";
 
 interface Props {
-    code:string
+    code: string
 }
 
-const Demo:React.FunctionComponent<Props>=(props)=>{
-    const [codeVisible,setCodeVisible] =useState(false);
-    const [IconState , setIconState] = useState(false)
-    const code =(
+const Demo: React.FunctionComponent<Props> = (props) => {
+    const [codeVisible, setCodeVisible] = useState(false);
+    const [IconState, setIconState] = useState(false)
+    const code = (
         <Highlight {...defaultProps} code={props.code} language="jsx">
             {({className, style, tokens, getLineProps, getTokenProps}) => (
                 <pre className={className} style={style}>
@@ -25,17 +25,35 @@ const Demo:React.FunctionComponent<Props>=(props)=>{
             )}
         </Highlight>
     );
-    return(
+    return (
         <div>
             <div>
                 {props.children}
             </div>
             <div>
-                <Icon className={"IconTrigger"} name={IconState?"code":"code.off"}
-                      onClick={() => {
-                          setCodeVisible(!codeVisible);
-                          setIconState(!IconState);
-                      }}>查看代码</Icon>
+                <div style={{textAlign: "right", margin: "0 15px"}}>
+                    <Icon className={"IconTrigger"} name={IconState ? "code" : "code.off"}
+                          onClick={() => {
+                              setCodeVisible(!codeVisible);
+                              setIconState(!IconState);
+                          }}
+                          style={{cursor: "pointer"}}
+                    />
+                    <span style={{
+                        fontWeight: "bold",
+                        verticalAlign: "top",
+                        lineHeight: "20px",
+                        marginLeft: "4px",
+                        cursor: "pointer"
+                    }}
+                          onClick={() => {
+                              setCodeVisible(!codeVisible);
+                              setIconState(!IconState);
+                          }}
+                    >
+                                Try it
+                    </span>
+                </div>
                 {codeVisible && code}
             </div>
         </div>

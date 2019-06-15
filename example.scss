@@ -1,3 +1,4 @@
+@import "lib/helper";
 *{ margin: 0; padding: 0; box-sizing: border-box ;}
 *:after,*:before{ box-sizing: border-box; }
 ul,ol{list-style: none}
@@ -24,6 +25,10 @@ a{text-decoration: none}
     }
     &Logo{padding:15px 10px; font-weight: 600; letter-spacing: 1px; margin-top: 15px;}
     &Lable{ font-weight: 600; padding:15px 10px;}
+  }
+  &asideRight{
+    min-width: 200px;
+    &-card{ font-family: $main-font-family; width: 100%; position: fixed; top: 130px; }
   }
   &content{ padding: 15px;}
   &footer{ font-size: 14px; display: flex; justify-content: center; }
