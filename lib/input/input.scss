@@ -1,6 +1,7 @@
 @import "../helper";
 
 .roue-input{
+  opacity: .6;
   padding: 9.5px 14px;
   line-height: 1em;
   letter-spacing: normal;
@@ -8,12 +9,40 @@
   font: 400 100% Arial;
   border-radius: 4px;
   border: 1px solid $main-border-color ;
+  transition: all  250ms;
    &:focus{
     outline: none;
-     border: 1px solid $main-focus-color;
+     box-shadow: 0 0 5px 0 fade-in($main-focus-color,0.5);
+     opacity: 1;
   }
   &-focus{
     border: 1px solid $main-focus-color;
+    box-shadow: 0 0 5px 0 fade-in($main-focus-color,0.5);
+  }
+  &-disabled{
+    opacity: .45;
+  }
+  &-error{
+    border: 1px solid $main-error-color;
+    &:focus{
+      box-shadow: 0 0 5px 0 fade-in($main-error-color,0.5);
+    }
+  }
+  &-success{
+    border: 1px solid $main-success-color;
+    &:focus{
+      box-shadow: 0 0 5px 0 fade-in($main-success-color,0.5);
+    }
+  }
+}
 
+
+.Icon{
+  &-loading{
+   animation : rotate 500ms infinite linear;
+  }
+  @keyframes rotate{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(359deg)}
   }
 }

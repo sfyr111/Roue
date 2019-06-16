@@ -6,8 +6,8 @@ import {Fragment} from 'react';
 export default  function(){
     return(
         <Fragment>
-            <Input focus placeholder='Focus...' />
-            <Input disabled placeholder='Disabled...' />
+            <Input error  placeholder='Error...' />
+            <Input success placeholder='Success...' />
         </Fragment>
     )
 }
