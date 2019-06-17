@@ -34,10 +34,10 @@ const Input: React.FunctionComponent<Props> = (props) => {
 
     return (
         <Fragment>
-            {(states.loading && iconLeft) ? createIcon("loading","Icon-loading"):""}
+            {(states.loading && iconLeft) ? createIcon("loading","roue-input-iconLoading"):""}
                 <input type="text" disabled={states.disabled}
                    className={sc({...states}, {extra: ["roue-input", className ? className : ""].filter(Boolean).join(" ")})} {...rest} />
-            {(states.loading && !iconLeft) ? createIcon("loading","Icon-loading"):""}
+            {(states.loading && !iconLeft) ? createIcon("loading","roue-input-iconLoading"):""}
         </Fragment>
 
     )

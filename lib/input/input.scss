@@ -15,12 +15,20 @@
      box-shadow: 0 0 5px 0 fade-in($main-focus-color,0.5);
      opacity: 1;
   }
+  &-iconLoading{
+    animation : rotate 500ms infinite linear;
+  }
+  @keyframes rotate{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(359deg)}
+  }
   &-focus{
     border: 1px solid $main-focus-color;
     box-shadow: 0 0 5px 0 fade-in($main-focus-color,0.5);
   }
   &-disabled{
     opacity: .45;
+    cursor:not-allowed;
   }
   &-error{
     border: 1px solid $main-error-color;
@@ -33,16 +41,5 @@
     &:focus{
       box-shadow: 0 0 5px 0 fade-in($main-success-color,0.5);
     }
-  }
-}
-
-
-.Icon{
-  &-loading{
-   animation : rotate 500ms infinite linear;
-  }
-  @keyframes rotate{
-    0%{transform: rotate(0deg)}
-    100%{transform: rotate(359deg)}
   }
 }

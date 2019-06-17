@@ -1,7 +1,6 @@
 import * as React from 'react'
 import * as ReactDom from 'react-dom'
 import {HashRouter as Router, Route, NavLink} from 'react-router-dom'
-import ButtonExample from "./lib/button/button.example";
 import DialogExample from "./lib/dialog/dialog.example";
 import LayoutExample from "./lib/layout/layout.example";
 import {Layout, Header, Footer, Content, Aside} from "./lib/layout/layout";
@@ -12,6 +11,7 @@ import "./example.scss"
 import {Icon} from "./lib";
 import IconDemo from "./lib/icon/demo/icon.demo";
 import Container from "./lib/container/container";
+import ButtonDemo from "./lib/button/demo/button.demo";
 
 ReactDom.render(
     <Router>
@@ -55,7 +55,7 @@ ReactDom.render(
                 </Aside>
                 <Content className={"example-content"}>
                     <Route path="/icon" component={IconDemo}/>
-                    <Route path="/button" component={ButtonExample}/>
+                    <Route path="/button" component={ButtonDemo}/>
                     <Route path="/dialog" component={DialogExample}/>
                     <Route path="/layout" component={LayoutExample}/>
                     <Route path="/input" component={InputDemo}/>
