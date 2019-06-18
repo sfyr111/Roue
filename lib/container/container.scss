@@ -1,5 +1,9 @@
 .roue-container{
   border: 1px solid #EEE;
-  box-shadow: 3px 5px 8px 0 rgba(128,128,128,1);
   padding: 20px 15px;
+  box-shadow: 1px 1px 4px 0 rgba(128,128,128,1);
+  transition: boxshadow 250ms;
+  &:hover{
+    box-shadow: 3px 5px 8px 0 rgba(128,128,128,1);
+  }
 }

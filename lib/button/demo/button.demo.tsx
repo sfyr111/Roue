@@ -1,5 +1,7 @@
 import ButtonExample1 from './button.example1';
 import ButtonExample2 from './button.example2';
+import ButtonExample3 from './button.example3';
+import ButtonExample4 from './button.example4';
 import * as React from 'react';
 import Demo from '../../../demo';
 import {Fragment} from 'react';
@@ -20,13 +22,25 @@ const ButtonDemo = () => {
                 </Demo>
             </Container>
             <Container className={"wrapper"}>
-                <h3>Focus and Disabled</h3>
                 <p className={"introduce"}>You can do the same using shorthands.</p>
                 <Demo code={require('!!raw-loader!./button.example2.tsx').default}>
                     <ButtonExample2/>
                 </Demo>
             </Container>
-
+            <Container className={"wrapper"}>
+                <h3>Emphasis</h3>
+                <p className={"introduce"}>A button can be formatted to show different levels of emphasis.</p>
+                <Demo code={require('!!raw-loader!./button.example3.tsx').default}>
+                    <ButtonExample3/>
+                </Demo>
+            </Container>
+            <Container className={"wrapper"}>
+                <h3>Group</h3>
+                <p className={"introduce"}>A button group can be less pronounced.</p>
+                <Demo code={require('!!raw-loader!./button.example4.tsx').default}>
+                    <ButtonExample4/>
+                </Demo>
+            </Container>
         </Fragment>
     )
 };
