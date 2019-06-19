@@ -1,0 +1,38 @@
+@import "../../helper";
+@import "../../demoHelp";
+
+
+.example-layout{
+  height:200px;
+
+  color: whitesmoke;
+  font-size: 16px;
+  &-header{
+    background: #7dbcea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+  }
+  &-content{
+    background: #108ee9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+  }
+  &-footer{
+    background: #7dbcea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+  }
+  &-aside{
+    background:#3ba0e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+  }
+}

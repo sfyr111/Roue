@@ -6,7 +6,7 @@ a{text-decoration: none}
 .example-{
   font-weight: normal;
   &main{ min-height: 100vh;
-    margin-top: 55px; }
+    margin-top: 40px; }
   &header{ font-size: 18px; font-family: "Arial Black", Helvetica, monospace ; font-weight: 600 ; display: flex;
     align-items: center; background: #FFFFFF; position: fixed;width: 100%; overflow: hidden; border-bottom: 1px solid  #EEEEEE;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -18,7 +18,7 @@ a{text-decoration: none}
   &aside{
     color: white; min-width: 230px; font-size: 14px; font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     &Wrapper{
-      height: 100%; background: black; border-top-right-radius:85%; overflow: hidden;
+      height: 100%; background: black;
       >ul>li>a.active{ color: black;font-weight: bold; transition: 0.3s; background: #ccc; border-radius: 4px; }
       >ul>li>a:hover{ color: black;transition: 0.3s; background: #ccc; border-radius: 4px; }
       >ul>li>a{ color: white; display: block; padding: 10px 0 10px 20px; }
