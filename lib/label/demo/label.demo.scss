@@ -1,0 +1,13 @@
+@import "../../helper";
+@import "../../demoHelp";
+.roue-label{ margin:15px; }
+.example-label-floating{ margin: 15px; display: inline-flex;
+  >button{margin: 0; padding: .25em 1em;
+  >div{ margin: 0; margin-left: -1.25em; margin-bottom: -1.25em; }}
+}
+.example-label{
+  &-tag{
+    &-red{ background: red; color: #fff; }
+    &-black{ background: black; color: #fff;  }
+  }
+}

@@ -27,35 +27,31 @@ const Demo: React.FunctionComponent<Props> = (props) => {
     );
     return (
         <div>
-            <div>
-                {props.children}
-            </div>
-            <div>
-                <div style={{textAlign: "right", margin: "0 15px"}}>
-                    <Icon className={"IconTrigger"} name={IconState ? "code" : "code.off"}
-                          onClick={() => {
-                              setCodeVisible(!codeVisible);
-                              setIconState(!IconState);
-                          }}
-                          style={{cursor: "pointer"}}
-                    />
-                    <span style={{
-                        fontWeight: "bold",
-                        verticalAlign: "top",
-                        lineHeight: "20px",
-                        marginLeft: "4px",
-                        cursor: "pointer"
-                    }}
-                          onClick={() => {
-                              setCodeVisible(!codeVisible);
-                              setIconState(!IconState);
-                          }}
-                    >
+            {props.children}
+            <div style={{textAlign: "right", margin: "0 15px"}}>
+                <Icon className={"IconTrigger"} name={IconState ? "code" : "code.off"}
+                      onClick={() => {
+                          setCodeVisible(!codeVisible);
+                          setIconState(!IconState);
+                      }}
+                      style={{cursor: "pointer"}}
+                />
+                <span style={{
+                    fontWeight: "bold",
+                    verticalAlign: "top",
+                    lineHeight: "20px",
+                    marginLeft: "4px",
+                    cursor: "pointer"
+                }}
+                      onClick={() => {
+                          setCodeVisible(!codeVisible);
+                          setIconState(!IconState);
+                      }}
+                >
                                 Try it
                     </span>
-                </div>
-                {codeVisible && code}
             </div>
+            {codeVisible && code}
         </div>
     );
 };
