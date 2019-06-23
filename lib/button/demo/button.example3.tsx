@@ -6,8 +6,8 @@ import Button from "../button";
 export default  function(){
     return(
         <Fragment>
-            <Button primary content={"Click here"}/>
-            <Button secondary content={"Click here"}/>
+            <Button className={"example-button"} primary content={"Click here"}/>
+            <Button className={"example-button"} secondary content={"Click here"}/>
         </Fragment>
     )
 }

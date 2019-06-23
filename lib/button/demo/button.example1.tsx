@@ -5,7 +5,7 @@ import Button from "../button"
 export default  function(){
     return(
         <Fragment>
-            <Button>Click here</Button>
+            <Button className={"example-button"}>Click here</Button>
         </Fragment>
     )
 }

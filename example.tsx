@@ -1,7 +1,6 @@
 import * as React from 'react'
 import * as ReactDom from 'react-dom'
 import {HashRouter as Router, Route, NavLink} from 'react-router-dom'
-import DialogExample from "./lib/dialog/dialog.example";
 import {Layout, Header, Footer, Content, Aside} from "./lib/layout/layout";
 import InputDemo from "./lib/input/demo/input.demo"
 const logo = require('./logo.png');
@@ -12,6 +11,7 @@ import Container from "./lib/container/container";
 import ButtonDemo from "./lib/button/demo/button.demo";
 import LayoutDemo from"./lib/layout/demo/layout.demo"
 import LabelDemo from "./lib/label/demo/label.demo";
+import DialogDemo from "./lib/dialog/demo/dialog.demo";
 ReactDom.render(
     <Router>
         <Layout>
@@ -55,7 +55,7 @@ ReactDom.render(
                 <Content className={"example-content"}>
                     <Route path="/icon" component={IconDemo}/>
                     <Route path="/button" component={ButtonDemo}/>
-                    <Route path="/dialog" component={DialogExample}/>
+                    <Route path="/dialog" component={DialogDemo}/>
                     <Route path="/layout" component={LayoutDemo}/>
                     <Route path="/input" component={InputDemo}/>
                     <Route path="/label" component={LabelDemo}/>

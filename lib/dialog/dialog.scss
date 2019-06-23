@@ -1,5 +1,5 @@
 .roue-dialog{
-  position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 30em; min-height: 8em;
+  position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); min-width: 30em; min-height: 8em;
   border-radius:6px; background: white;display: flex; flex-direction: column;
   &-mask{
     position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: fade_out(black,0.5);
@@ -18,5 +18,8 @@
     display: flex; justify-content: flex-end;
     border-top: 1px solid rgba(34,36,38,.15);
     padding: 8px 16px;
+  }
+  &-button {
+    &:first-child{margin-right: 10px}
   }
 }
