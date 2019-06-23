@@ -28,7 +28,7 @@ ReactDom.render(
                 <Aside className={"example-aside"}>
                     <div className={"example-asideWrapper"}>
                         <p className={"example-asideLogo"}>Roue-UI <br/>
-                            v0.0.1</p>
+                            v0.1.0</p>
                         <p className={"example-asideLable"}>Components</p>
                         <ul>
                             <li>

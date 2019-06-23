@@ -17,19 +17,19 @@ describe('Input', () => {
         expect(component.find("input").hasClass("roue-input-loading")).toEqual(true);
         expect(component.find("svg").hasClass("roue-input-iconLoading")).toEqual(true);
     });
-    it('iconLeft', function () {
+    it('input iconLeft', function () {
         const component = mount(<Input iconLeft loading />);
         expect(component.props().iconLeft).toEqual(true)
     });
-    it('disabled', function () {
+    it('input disabled', function () {
         const component = mount(<Input disabled />);
         expect(component.find("input").hasClass("roue-input-disabled")).toEqual(true);
     });
-    it('error', function () {
+    it('input error', function () {
         const component = mount(<Input error />);
         expect(component.find("input").hasClass("roue-input-error")).toEqual(true);
     });
-    it('success', function () {
+    it('input success', function () {
         const component = mount(<Input success />);
         expect(component.find("input").hasClass("roue-input-success")).toEqual(true);
     });
