@@ -60,11 +60,11 @@ const alert = (header: ReactElement | string = "Alert", content: string) => {
     const button = [<Button onClick={() => {
         close()
     }}>Ok</Button>];
-    const close = modal(header, content, button)
+    const close = modal(header, content, button,false)
 };
 
 
-const modal = (header: ReactElement | string="Modal", content: ReactNode, buttons?: Array<ReactElement>) => {
+const modal = (header: ReactElement | string="Modal", content: ReactNode, buttons?: Array<ReactElement>,closeMask?:boolean) => {
     const onClose = () => {
         ReactDom.render(React.cloneElement(component, {visible: false}), div);
         ReactDom.unmountComponentAtNode(div);
@@ -76,7 +76,7 @@ const modal = (header: ReactElement | string="Modal", content: ReactNode, button
             onClose={() => {
                 onClose()
             }}
-            closeOnClickMask={true}
+            closeOnClickMask={closeMask}
             buttons={buttons}
             header={header}
         >{content}
@@ -102,7 +102,7 @@ const confirm = (header: ReactElement | string = "Confirm", content: string, yes
     }}>yes</Button>, <Button className={"roue-dialog-button"} secondary onClick={() => {
         onNo()
     }}> no</Button>]
-    const close = modal(header, content, buttons)
+    const close = modal(header, content, buttons,false)
 };
 
 export {alert, confirm, modal};

@@ -1,6 +1,8 @@
 import DialogExample1 from "./dialog.example1";
 import DialogExample2 from "./dialog.example2";
 import DialogExample3 from "./dialog.example3";
+import DialogExample4 from "./dialog.example4";
+import DialogExample5 from "./dialog.example5";
 import * as React from 'react';
 import Demo from '../../../demo';
 import {Fragment} from 'react';
@@ -30,6 +32,18 @@ const DialogDemo = () => {
                 <p className={"introduce"}>Modal Dialog</p>
                 <Demo code={require('!!raw-loader!./dialog.example3.tsx').default}>
                     <DialogExample3/>
+                </Demo>
+            </Container>
+            <Container className={"wrapper"}>
+                <p className={"introduce"}>non-button Dialog</p>
+                <Demo code={require('!!raw-loader!./dialog.example4.tsx').default}>
+                    <DialogExample4/>
+                </Demo>
+            </Container>
+            <Container className={"wrapper"}>
+                <p className={"introduce"}>button Dialog</p>
+                <Demo code={require('!!raw-loader!./dialog.example5.tsx').default}>
+                    <DialogExample5/>
                 </Demo>
             </Container>
         </Fragment>
