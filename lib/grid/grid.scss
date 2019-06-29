@@ -1,0 +1,22 @@
+.roue-grid-row {
+  display: flex;
+  flex-wrap: wrap;
+  &.align-left { justify-content: flex-start; }
+  &.align-right { justify-content: flex-end; }
+  &.align-center { justify-content: center; }
+}
+
+.roue-grid-col{
+  $class-prefix:roue-grid-col-;
+  @for $n from 1 through 24 {
+    &.#{$class-prefix}#{$n} {
+      width: ($n / 24) * 100%;
+    }
+  }
+  $class-prefix:roue-grid-offset-;
+  @for $n from 1 through 24 {
+    &.#{$class-prefix}#{$n} {
+      margin-left: ($n / 24) * 100%;
+    }
+  }
+}

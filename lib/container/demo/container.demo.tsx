@@ -4,7 +4,7 @@ import * as React from 'react';
 import Demo from '../../../demo';
 import {Fragment} from 'react';
 
-const ButtonDemo = () => {
+const ContainerDemo = () => {
     return (
         <Fragment>
             <h1>Container</h1>
@@ -19,4 +19,4 @@ const ButtonDemo = () => {
     )
 };
 
-export default ButtonDemo
+export default ContainerDemo

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Highlight, {defaultProps} from "prism-react-renderer";
 import {useState} from 'react';
 import {Icon} from "./lib";
-
+import "./lib/_demoHelp.scss"
 interface Props {
     code: string
 }
