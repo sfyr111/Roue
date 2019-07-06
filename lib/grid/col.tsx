@@ -17,7 +17,7 @@ const colStyle = (gutter: number) => {
 };
 
 const colClass = (span: number | string, offset: number | string) => {
-    return span && offset ? [
+    return span || offset ? [
         span && `roue-grid-col-${span}`,
         offset && `roue-grid-offset-${offset}`,
     ] : [];

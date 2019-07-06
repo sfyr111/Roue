@@ -1,2 +1,12 @@
 @import "../../helper";
-.roue-grid-col
+.roue-grid-col{
+  background:$primary-button-background ;
+  min-height:60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:lighten($primary-button-background,10%) ;
+  &:nth-child(odd){
+    background:$primary-button-background ;
+  }
+}

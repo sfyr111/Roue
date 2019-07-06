@@ -14,6 +14,7 @@ import LabelDemo from "./lib/label/demo/label.demo";
 import DialogDemo from "./lib/dialog/demo/dialog.demo";
 import ContainerDemo from "./lib/container/demo/container.demo";
 import GridDemo from "./lib/grid/demo/grid.demo";
+import AffixDemo from "./lib/affix/demo/affix.demo";
 ReactDom.render(
     <Router>
         <Layout>
@@ -57,7 +58,9 @@ ReactDom.render(
                             <li>
                                 <NavLink to="/container">Container</NavLink>
                             </li>
-
+                            <li>
+                                <NavLink to="/affix">Affix</NavLink>
+                            </li>
                         </ul>
                     </div>
                 </Aside>
@@ -70,6 +73,8 @@ ReactDom.render(
                     <Route path="/label" component={LabelDemo}/>
                     <Route path="/container" component={ContainerDemo}/>
                     <Route path="/grid" component={GridDemo}/>
+                    <Route path="/affix" component={AffixDemo}/>
+
                 </Content>
                 <Aside className={"example-asideRight"}>
                     <Container className={"example-asideRight-card"}>
