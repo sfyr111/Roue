@@ -18,7 +18,7 @@ const Affix: React.FunctionComponent<Props> = (props) => {
         const affix = useRef(null);
         // not good functional
         const addStyle = (offset: number, affix: any) => {
-            window.onscroll = () => {
+            return () => {
                 const height = window.scrollY;
                 if (offset === height || height > offset) {
                     affix.current.style.position = "fixed";
@@ -31,11 +31,15 @@ const Affix: React.FunctionComponent<Props> = (props) => {
         };
         const fixedElement = (affix: any) => {
             const offset =  affix.current.offsetTop;
-            addStyle(offset, affix)
+            return  addStyle(offset, affix)
         };
 
         useEffect(() => {
-            fixedElement(affix)
+            const onscrollHandle =  fixedElement(affix);
+            window.addEventListener("scroll", onscrollHandle);
+            return ()=>{
+                window.removeEventListener("scroll", onscrollHandle)
+            }
         });
         return (
             <div ref={affix}
@@ -47,5 +51,5 @@ const Affix: React.FunctionComponent<Props> = (props) => {
                 {props.children}
             </div>
         )
-    }
+    };
 export default Affix
