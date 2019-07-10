@@ -12,7 +12,6 @@ interface Props extends HTMLAttributes<HTMLElement> {
 const Affix: React.FunctionComponent<Props> = (props) => {
         const {
             className,
-            onChange,
             ...rest
         } = props;
         const affix = useRef(null);

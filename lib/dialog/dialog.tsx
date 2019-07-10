@@ -1,13 +1,12 @@
 import * as React from 'react';
 import './dialog.scss';
-import '../index.tsx'
 import {Fragment, ReactElement, ReactNode} from 'react';
 import * as ReactDom from 'react-dom'
 import {scopedClassMaker} from "../helper/classes";
 import Button from "../button/button";
 
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLElement>{
     visible: boolean;
     header?: ReactElement | string,
     buttons?: Array<ReactElement>;
