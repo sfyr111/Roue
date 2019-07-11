@@ -6,7 +6,7 @@ import Button from "../../button/button";
 export default  function (){
     return(
           <Fragment>
-              <Button onClick={()=>message.normal("Did you have good night sleep ? ")}>Normal</Button>
+              <Button onClick={()=>message.loading("I can speak loudly.",1000,()=>{alert("I'm here")})}>Has onClose</Button>
           </Fragment>
     )
 }

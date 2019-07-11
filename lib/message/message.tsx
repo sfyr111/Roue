@@ -37,7 +37,10 @@ const Message: React.FunctionComponent<Props> = (props) => {
 };
 Message.defaultProps = {
     visible: true
-}
+};
+
+
+
 const creatWrapper = () => {
     const wrapper = document.createElement('div');
     wrapper.className = "roue-message-wrapper";
@@ -46,6 +49,10 @@ const creatWrapper = () => {
     return wrapper
 };
 const wrapper = creatWrapper();
+
+
+
+
 const result = (content: string | ReactNode, duration?: number, onClose?: () => void, type?: string, iconClass?: string) => {
     const Close = () => {
         ReactDom.render(React.cloneElement(component, {visible: false}), div);
@@ -53,17 +60,24 @@ const result = (content: string | ReactNode, duration?: number, onClose?: () => 
         div.remove();
         onClose && onClose()
     };
-    const component =
+    const component =(
         <Message iconClass={iconClass} type={type}>
             {content}
-        </Message>;
+        </Message>
+    );
+
     const div = document.createElement("div");
     wrapper.append(div);
     ReactDom.render(component, div);
+
     setTimeout(() => {
         Close()
-    }, duration || 2000)
+    }, duration || 3000)
 };
+
+
+
+
 
 const message = {
     normal: (content: string | ReactNode) => {
@@ -85,5 +99,7 @@ const message = {
         result(content, duration, onClose, "loading", "roue-message-icon-loading")
     }
 };
+
+
 
 export {message}
