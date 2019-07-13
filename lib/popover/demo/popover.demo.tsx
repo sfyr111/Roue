@@ -4,6 +4,7 @@ import {Fragment} from 'react';
 import Popover1 from "./popover.example1";
 import Popover2 from "./popover.example2";
 import Popover3 from "./popover.example3";
+import Popover4 from "./popover.example4";
 import "./popover.demo.scss";
 import Container from "../../container/container";
 const  PopoverDemo = () => {
@@ -24,6 +25,13 @@ const  PopoverDemo = () => {
                 <p className={"introduce"}>You can set position of message for information.</p>
                 <Demo code={require('!!raw-loader!./popover.example2.tsx').default}>
                     <Popover2/>
+                </Demo>
+            </Container>
+            <Container className={"wrapper"}>
+                <h3>WrapperClose</h3>
+                <p className={"introduce"}>You can set wrapperClose when you want onClose at wrapper. </p>
+                <Demo code={require('!!raw-loader!./popover.example4.tsx').default}>
+                    <Popover4/>
                 </Demo>
             </Container>
             <Container className={"wrapper"}>
