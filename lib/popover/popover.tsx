@@ -24,14 +24,18 @@ const Popover: React.FunctionComponent<Props> = (props) => {
     const contentWrapperRef = useRef(document.createElement("div"));
     const triggerWrapperRef = useRef(document.createElement("div"));
     const wrapperRef = useRef(document.createElement("div"));
+    const contentRef = useRef(document.createElement("div"));
     const getTriggerElement = () => {
         return triggerWrapperRef.current;
     };
     const getContentElement = () => {
         return contentWrapperRef.current;
     };
-    const wrapperElement = () => {
+    const getWrapperElement = () => {
         return wrapperRef.current
+    }
+    const getContent = () => {
+        return contentRef.current
     }
     const validator = () => {
         return (position === "top" || position === "left" || position === "right" || position === "bottom") ? position : "top"
@@ -77,7 +81,7 @@ const Popover: React.FunctionComponent<Props> = (props) => {
     };
     const wrapperEvent = (e: MouseEvent) => {
         if (getContentElement()) {
-            if (!(e.target === getContentElement())) {
+            if (!(e.target === getContent())) {
                 e.stopPropagation();
                 setVisible(false)
             }
@@ -90,8 +94,8 @@ const Popover: React.FunctionComponent<Props> = (props) => {
                 document.body.addEventListener("click", wrapperEvent)
             }
         } else {
-            wrapperElement().addEventListener('mouseenter', open);
-            wrapperElement().addEventListener('mouseleave', close)
+            getWrapperElement().addEventListener('mouseenter', open);
+            getWrapperElement().addEventListener('mouseleave', close)
         }
     };
     const removeEvent = (trigger: string, wrapperClose: boolean) => {
@@ -101,8 +105,8 @@ const Popover: React.FunctionComponent<Props> = (props) => {
                 document.body.removeEventListener("click", wrapperEvent)
             }
         } else {
-            wrapperElement().removeEventListener('mouseenter', open);
-            wrapperElement().removeEventListener('mouseleave', close)
+            getWrapperElement().removeEventListener('mouseenter', open);
+            getWrapperElement().removeEventListener('mouseleave', close)
         }
     };
     useEffect(() => {
@@ -119,11 +123,9 @@ const Popover: React.FunctionComponent<Props> = (props) => {
             {...rest}
         >
             {visible ?
-                <div
-                    ref={contentWrapperRef} className={sc({
-                    "": true,
-                    [`position-${position}`]: true
-                }, {extra: className})}>{content}</div> : null}
+                <div ref={contentWrapperRef}  className={`roue-popover-wrapper-position-${position}`}>
+                    <div ref={contentRef}  onClick={()=>{}} className={sc({"":true},{extra:className})}> {content}</div>
+                </div> : null}
             <div ref={triggerWrapperRef}>  {props.children}</div>
         </div>
     )
