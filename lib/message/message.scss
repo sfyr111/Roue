@@ -8,7 +8,7 @@
   }
 margin-top: 15px; background: rgba(0, 0, 0, 0.8); border-radius: 4px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); display: inline-flex; align-items: center;
   padding: 0.5em 1em; color: white; animation: slide-down 300ms;
-  > svg { height: 1.2em; width: 1.2em; margin-right: 8px; }
+  & svg { height: 1.2em; width: 1.2em; margin-right: 8px; }
   &-icon {
     &-loading { animation: rotate 500ms infinite linear; fill:white;
       @keyframes rotate { 0% { transform: rotate(0deg) } 100% { transform: rotate(359deg) } }

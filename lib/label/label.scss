@@ -5,7 +5,7 @@
   font-family: $main-font-family; display: inline-flex; letter-spacing: 0.5px; background: $label-background; align-items: center;
   padding: 0.25em 0.5em ; border-radius: .25em; opacity: .9;
   &:hover{ opacity: 1; }
-  >.roue-icon{ margin-right: .5em; }
+  & .roue-icon{ margin-right: .5em; }
   &-image ,&-imageRight{ cursor: pointer; padding: 0 .5em 0 0;
     >img{ border-radius: inherit; height: 2em; margin: 0 .5em 0 0; border-top-right-radius: 0; border-bottom-right-radius: 0; } }
   &-imageRight{ padding: 0 0 0 .5em; >img{ border-radius: inherit; margin: 0 0 0 .5em; border-top-left-radius: 0; border-bottom-left-radius: 0; } }
@@ -15,5 +15,6 @@
     &::after{ display: block; content: ""; position: absolute; right: 100%; background: white; height: 0.5em; width: 0.5em; border-radius: 50%;
       box-shadow: 0 -1px 1px 0 rgba(0,0,0,.3); margin-right: -.25em; } }
   &-floating{ background:red; color: white; position: absolute; bottom: 100%; left: 100%; margin-left: -1.25em;
-    margin-bottom: -1.25em; border-radius: 50%; padding: 0.25em; }
+    margin-bottom: -1.25em; border-radius: 50%; padding: 0.25em;
+  }
 }

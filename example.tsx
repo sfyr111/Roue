@@ -16,6 +16,7 @@ import ContainerDemo from "./lib/container/demo/container.demo";
 import GridDemo from "./lib/grid/demo/grid.demo";
 import AffixDemo from "./lib/affix/demo/affix.demo";
 import MessageDemo from "./lib/message/demo/message.demo";
+import PopoverDemo from "./lib/popover/demo/popover.demo";
 
 ReactDom.render(
     <Router>
@@ -66,6 +67,9 @@ ReactDom.render(
                             <li>
                                 <NavLink to="/message">Message</NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/popover">Popover</NavLink>
+                            </li>
                         </ul>
                     </div>
                 </Aside>
@@ -79,7 +83,8 @@ ReactDom.render(
                     <Route path="/container" component={ContainerDemo}/>
                     <Route path="/grid" component={GridDemo}/>
                     <Route path="/affix" component={AffixDemo}/>
-                    <Route path="/Message" component={MessageDemo}/>
+                    <Route path="/message" component={MessageDemo}/>
+                    <Route path="/popover" component={PopoverDemo}/>
                 </Content>
                 <Aside className={"example-asideRight"}>
                     <Container className={"example-asideRight-card"}>
@@ -88,7 +93,7 @@ ReactDom.render(
                 </Aside>
             </Layout>
             <Footer className={"example-footer"}>
-                <span>©Mattison </span>
+                <span>©Mattison</span>
             </Footer>
         </Layout>
     </Router>
