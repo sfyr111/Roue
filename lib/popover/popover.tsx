@@ -82,7 +82,6 @@ const Popover: React.FunctionComponent<Props> = (props) => {
     const wrapperEvent = (e: MouseEvent) => {
         if (getContentElement()) {
             if (!(e.target === getContent())) {
-                e.stopPropagation();
                 setVisible(false)
             }
         }
