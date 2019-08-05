@@ -28,7 +28,7 @@ const Input: React.FunctionComponent<Props> = (props) => {
         disabled: disabled ? disabled : false,
         error: error ? error : false,
         success: success ? success : false,
-    }
+    };
 
     const createIcon = (iconNames: string = "" ,className?:string) => <Icon name={iconNames} className={className}/>;
 

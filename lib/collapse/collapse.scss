@@ -1,0 +1,10 @@
+@import "../helper";
+
+
+.roue-collapse{
+  &Item{
+    &-header{
+      border: 1px solid gray;
+    }
+  }
+}

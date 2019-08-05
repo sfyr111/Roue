@@ -17,6 +17,7 @@ import GridDemo from "./lib/grid/demo/grid.demo";
 import AffixDemo from "./lib/affix/demo/affix.demo";
 import MessageDemo from "./lib/message/demo/message.demo";
 import PopoverDemo from "./lib/popover/demo/popover.demo";
+import CollapseDemo from "./lib/collapse/demo/collapse.demo";
 
 ReactDom.render(
     <Router>
@@ -70,6 +71,9 @@ ReactDom.render(
                             <li>
                                 <NavLink to="/popover">Popover</NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/collapse">Collapse</NavLink>
+                            </li>
                         </ul>
                     </div>
                 </Aside>
@@ -85,6 +89,7 @@ ReactDom.render(
                     <Route path="/affix" component={AffixDemo}/>
                     <Route path="/message" component={MessageDemo}/>
                     <Route path="/popover" component={PopoverDemo}/>
+                    <Route path="/collapse" component={CollapseDemo}/>
                 </Content>
                 <Aside className={"example-asideRight"}>
                     <Container className={"example-asideRight-card"}>
