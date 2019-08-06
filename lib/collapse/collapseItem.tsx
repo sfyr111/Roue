@@ -1,32 +1,49 @@
 import * as React from "react";
 import "./collapse.scss"
 import {scopedClassMaker} from "../helper/classes";
-import {Fragment, ReactNode, useState} from "react";
-
+import {ReactNode, useContext} from "react";
+import {MyContext} from "./reducer";
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
-    header: string | ReactNode
+    header: string | ReactNode,
+    name: string | number
 }
 
+
 const sc = scopedClassMaker("roue-collapseItem");
+
 
 const CollapseItem: React.FunctionComponent<Props> = (props) => {
     const {
         className,
         header,
+        name,
         ...rest
     } = props;
-    const [visible, setVisible] = useState(false);
+    const {state, dispatch, single} = useContext(MyContext);
+
+    const validatorClick = () => {
+        if (single) {
+            dispatch({type: 'SINGLE', name: name})
+        } else if (state && state.indexOf(name) >= 0) {
+            dispatch({type: 'REMOVE', name: name});
+        } else {
+            dispatch({type: 'ADD', name: name});
+        }
+    };
+
+
     return (
-        <Fragment>
+        <div className={sc({"":true})}>
             <div className={sc({"header": true}, {extra: className})}
                  {...rest}
-                 onClick={() => setVisible(!visible)}
+                 onClick={validatorClick}
             >
                 {header}
             </div>
-            {visible && <div className={sc({"content": true})}>{props.children}</div>}
-        </Fragment>
+            {state && state.indexOf(name) >= 0 && <div
+                className={sc({"content": true})}>{props.children}</div>}
+        </div>
     )
 };
 

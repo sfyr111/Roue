@@ -4,7 +4,7 @@ import CollapseItem from  "../collapseItem";
 
 export default  function(){
     return(
-            <Collapse >
+            <Collapse single>
                 <CollapseItem name={1} header={"this is my header"}>
                     This is my content
                 </CollapseItem>
