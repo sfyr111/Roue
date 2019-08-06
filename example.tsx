@@ -18,7 +18,7 @@ import AffixDemo from "./lib/affix/demo/affix.demo";
 import MessageDemo from "./lib/message/demo/message.demo";
 import PopoverDemo from "./lib/popover/demo/popover.demo";
 import CollapseDemo from "./lib/collapse/demo/collapse.demo";
-
+import TabsDemo from "./lib/tabs/demo/tabs.demo";
 ReactDom.render(
     <Router>
         <Layout>
@@ -74,6 +74,9 @@ ReactDom.render(
                             <li>
                                 <NavLink to="/collapse">Collapse</NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/tabs">Tabs</NavLink>
+                            </li>
                         </ul>
                     </div>
                 </Aside>
@@ -90,6 +93,7 @@ ReactDom.render(
                     <Route path="/message" component={MessageDemo}/>
                     <Route path="/popover" component={PopoverDemo}/>
                     <Route path="/collapse" component={CollapseDemo}/>
+                    <Route path="/tabs" component={TabsDemo}/>
                 </Content>
                 <Aside className={"example-asideRight"}>
                     <Container className={"example-asideRight-card"}>
