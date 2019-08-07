@@ -10,9 +10,9 @@
     align-items: center;
     &-active {
       font-weight: bold;
-      border-bottom: 1px solid grey;
     }
-  }
+    }
+  
   &-pane{
     padding: 1em;
   }
@@ -20,5 +20,12 @@
     display: flex;
     border-bottom: 1px solid #ddd;
     height: 40px;
+    position: relative;
+    &-line {
+      position: absolute;
+      bottom: 0;
+      border-bottom: 1px solid grey;
+      transition: all 350ms;
+    }
   }
 }
