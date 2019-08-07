@@ -18,12 +18,22 @@ a{text-decoration: none}
     color: white; min-width: 230px; font-size: 14px; font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     &Wrapper{
       height: 100%; background: black;
-      >ul>li>a.active{ color: black;font-weight: bold; transition: 0.3s; background: #ccc; border-radius: 4px; }
-      >ul>li>a:hover{ color: black;transition: 0.3s; background: #ccc; border-radius: 4px; }
-      >ul>li>a{ color: white; display: block; padding: 10px 0 10px 20px; }
+      >ul>li>a.active,.example-asideLable>a:active{ color: black;font-weight: bold; transition: 0.3s; background: #ccc; border-radius: 4px; }
+      >ul>li>a:hover ,.example-asideLable>a:hover{ color: black;transition: 0.3s; background: #ccc; border-radius: 4px; }
+      >ul>li>a{ color: white; display: block; padding: 10px 0 10px 30px; }
     }
     &Logo{padding:15px 10px; font-weight: 600; letter-spacing: 1px;}
-    &Lable{ font-weight: 600; padding:15px 10px;}
+    &Lable{
+        font-weight: 600;
+      >a{
+        padding: 13px 0 13px 10px;
+        display: block;
+        color: white;
+      }
+    }
+  }
+  &component-lable{
+    font-weight: 100; padding:10px 0 10px 20px ; color: #cccccc;
   }
   &asideRight{
     min-width: 200px;

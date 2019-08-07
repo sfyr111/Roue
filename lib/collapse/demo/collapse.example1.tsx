@@ -5,7 +5,7 @@ import CollapseItem from  "../collapseItem";
 export default  function(){
     return(
             <Collapse >
-                <CollapseItem name={1} header={"this is my header"}>
+                <CollapseItem name={1} header={"this is my header"} onClick={()=>console.log(1)}>
                     This is my content
                 </CollapseItem>
                 <CollapseItem name={2} header={"this is my header"}>
