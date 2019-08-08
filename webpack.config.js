@@ -28,6 +28,13 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|gif)$/,
                 use: [{loader: 'file-loader', options: {}}]
+            },
+            {
+                test: /\.md$/,
+                use: [
+                    'babel-loader',
+                    '@mdx-js/loader'
+                ]
             }
         ]
     },

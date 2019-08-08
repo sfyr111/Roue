@@ -15,9 +15,10 @@ a{text-decoration: none}
     }
   }
   &aside{
+    overflow: scroll;height: 100vh;
     color: white; min-width: 230px; font-size: 14px; font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     &Wrapper{
-      height: 100%; background: black;
+       background: black;
       >ul>li>a.active,.example-asideLable>a:active{ color: black;font-weight: bold; transition: 0.3s; background: #ccc; border-radius: 4px; }
       >ul>li>a:hover ,.example-asideLable>a:hover{ color: black;transition: 0.3s; background: #ccc; border-radius: 4px; }
       >ul>li>a{ color: white; display: block; padding: 10px 0 10px 30px; }
@@ -39,7 +40,7 @@ a{text-decoration: none}
     min-width: 200px;
     &-card{ font-family: $main-font-family; width: 100%; position: fixed; top: 130px; }
   }
-  &content{ padding: 15px;}
+  &content{ overflow: scroll; height: 100vh; padding: 15px;}
   &footer{ font-size: 14px; display: flex; justify-content: center; }
 }
 
