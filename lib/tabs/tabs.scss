@@ -8,8 +8,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     &-active {
       font-weight: bold;
+    }
+    &-icon{
+      position: absolute;
+      left: 10px;
     }
     }
   

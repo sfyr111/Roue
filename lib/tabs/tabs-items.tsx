@@ -4,7 +4,8 @@ import {HTMLAttributes, useContext, useEffect, useState} from "react";
 import {MyContext} from "./reducer";
 
 interface Props extends HTMLAttributes<HTMLElement> {
-    name: string | number
+    name: string | number;
+    iconName?:string
 }
 
 
@@ -15,34 +16,35 @@ const TabsItems: React.FunctionComponent<Props> = (props) => {
     const {
         className,
         name,
+        iconName,
         ...rest
     } = props;
-    const [active,setActive] = useState(false);
-    const {state,dispatch} = useContext(MyContext);
+    const [active, setActive] = useState(false);
+    const {state, dispatch} = useContext(MyContext);
 
 
-    const Active = ()=>{
-        if (state&&state.indexOf(name) < 0) {
-            setActive(false)
+    const Active = () => {
+        if (state && state.indexOf(name) < 0) {
+            setActive(false);
         } else {
-            setActive(true)
+            setActive(true);
         }
     };
 
-    useEffect(()=>{
-        Active()
-    },state)
+    useEffect(() => {
+        Active();
+    }, state);
 
 
-    return <div className={sc({"":true,active:active},{extra:className})}
+    return <div className={sc({"": true, active: active}, {extra: className})}
                 onClick={() => {
                     dispatch({type: "CHANGE", name: name});
                 }}
                 {...rest}
     >
         {props.children}
-    </div>
+    </div>;
 };
 
 
-export default TabsItems
+export default TabsItems;

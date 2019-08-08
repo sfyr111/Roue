@@ -1,6 +1,6 @@
 import * as React from "react";
 import {scopedClassMaker} from "../helper/classes";
-import {HTMLAttributes, useContext, useEffect, useRef} from "react"
+import {HTMLAttributes, useContext, useEffect, useRef} from "react";
 import {MyContext} from "./reducer";
 
 interface Props extends HTMLAttributes<HTMLElement> {
@@ -17,10 +17,10 @@ const TabsHead: React.FunctionComponent<Props> = (props) => {
         const headLine = useRef(document.createElement("div"));
         const tabsHead = useRef(document.createElement("div"));
         const getHeadLine = () => {
-            return headLine.current
+            return headLine.current;
         };
         const getTabsHead = () => {
-            return tabsHead.current
+            return tabsHead.current;
         };
 
 
@@ -35,14 +35,11 @@ const TabsHead: React.FunctionComponent<Props> = (props) => {
         };
 
 
-
         useEffect(() => {
             setTimeout(() => {
-                getLinePosition()
-            }, 0)
-        }, state)
-
-
+                getLinePosition();
+            }, 0);
+        }, state);
 
 
         return <div ref={tabsHead} className={sc({"": true}, {extra: className})}
@@ -50,10 +47,10 @@ const TabsHead: React.FunctionComponent<Props> = (props) => {
         >
             {props.children}
             <div ref={headLine} className="roue-tabs-head-line"/>
-        </div>
+        </div>;
 
     }
 ;
 
 
-export default TabsHead
+export default TabsHead;
