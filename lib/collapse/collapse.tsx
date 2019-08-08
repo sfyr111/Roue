@@ -3,7 +3,6 @@ import "./collapse.scss"
 import {scopedClassMaker} from "../helper/classes";
 import reducer ,{MyContext}from "./reducer"
 import {useReducer} from "react";
-
 interface Props extends React.HTMLAttributes<HTMLElement> {
     single?:boolean,
     selected?:Array<number|string>

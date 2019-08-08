@@ -18,27 +18,6 @@ const  AffixDemo = () => {
                     <AffixExample1/>
                 </Demo>
             </Container>
-            <Container className={"wrapper"}>
-                <h3>Basic</h3>
-                <p className={"introduce"}>The simplest usage.</p>
-                <Demo code={require('!!raw-loader!./affix.example1.tsx').default}>
-                    <AffixExample1/>
-                </Demo>
-            </Container>
-            <Container className={"wrapper"}>
-                <h3>Basic</h3>
-                <p className={"introduce"}>The simplest usage.</p>
-                <Demo code={require('!!raw-loader!./affix.example1.tsx').default}>
-                    <AffixExample1/>
-                </Demo>
-            </Container>
-            <Container className={"wrapper"}>
-                <h3>Basic</h3>
-                <p className={"introduce"}>The simplest usage.</p>
-                <Demo code={require('!!raw-loader!./affix.example1.tsx').default}>
-                    <AffixExample1/>
-                </Demo>
-            </Container>
         </Fragment>
     )
 };

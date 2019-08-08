@@ -22,6 +22,7 @@ import TabsDemo from "./lib/tabs/demo/tabs.demo";
 import SwitchDemo from "./lib/switch/demo/switch.demo";
 import Home from "./readMe/home";
 import installation from "./readMe/installation"
+import getStarted from "./readMe/getStarted";
 ReactDom.render(
     <Router>
         <Layout>
@@ -108,6 +109,7 @@ ReactDom.render(
                         </Aside>
                         <Content className={"example-content"}>
                             <Route path="/roue" exact component={installation}/>
+                            <Route path="/roue/getStarted" exact component={getStarted}/>
                             <Route path="/roue/components/icon" component={IconDemo}/>
                             <Route path="/roue/components/button" component={ButtonDemo}/>
                             <Route path="/roue/components/dialog" component={DialogDemo}/>
