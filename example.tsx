@@ -42,7 +42,7 @@ ReactDom.render(
                         <Aside className={"example-aside"}>
                             <div className={"example-asideWrapper"}>
                                 <p className={"example-asideLogo"}>Roue-UI <br/>
-                                    v0.1.0</p>
+                                    v1.0.0</p>
                                 <p className={"example-asideLable"}>
                                     <NavLink to="/roue">Installation</NavLink>
                                 </p>
