@@ -21,8 +21,10 @@ import CollapseDemo from "./lib/collapse/demo/collapse.demo";
 import TabsDemo from "./lib/tabs/demo/tabs.demo";
 import SwitchDemo from "./lib/switch/demo/switch.demo";
 import Home from "./readMe/home";
-import installation from "./readMe/installation"
+import installation from "./readMe/installation";
 import getStarted from "./readMe/getStarted";
+import FormDemo from "./lib/form/demo/form.demo";
+
 ReactDom.render(
     <Router>
         <Layout>
@@ -78,6 +80,9 @@ ReactDom.render(
                                     <li>
                                         <NavLink to="/roue/components/input">Input</NavLink>
                                     </li>
+                                    <li>
+                                        <NavLink to="/roue/components/form">Form</NavLink>
+                                    </li>
                                     <p className={"example-component-lable"}>Data Display</p>
 
                                     <li>
@@ -124,6 +129,7 @@ ReactDom.render(
                             <Route path="/roue/components/collapse" component={CollapseDemo}/>
                             <Route path="/roue/components/tabs" component={TabsDemo}/>
                             <Route path="/roue/components/switch" component={SwitchDemo}/>
+                            <Route path="/roue/components/form" component={FormDemo}/>
                             <Footer className={"example-footer"}>
                                 <span>©Mattison</span>
                             </Footer>

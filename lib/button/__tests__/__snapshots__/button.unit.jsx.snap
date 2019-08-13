@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button button exist 1`] = `
+exports[`Form button exist 1`] = `
 <button
   className="roue-button"
   onClick={[Function]}
