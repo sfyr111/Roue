@@ -45,8 +45,9 @@ const Form: React.FunctionComponent<Props> = (props) => {
             {...rest}
         >
             <table>
+                <tbody>
                 {fields.map(field =>
-                    <tr className="roue-form-tr" >
+                    <tr className="roue-form-tr"  key={field.name}>
                         <td className="roue-form-td">
                             <span>{field.label}</span>
                         </td>
@@ -63,6 +64,7 @@ const Form: React.FunctionComponent<Props> = (props) => {
                     <td className="roue-form-td" />
                     <td className="roue-form-td" >{buttons}</td>
                 </tr>
+                </tbody>
             </table>
         </form>
     );
