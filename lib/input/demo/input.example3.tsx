@@ -6,8 +6,8 @@ import {Fragment} from 'react';
 export default  function(){
     return(
         <Fragment>
-            <Input iconLeft loading placeholder='Loading...' />
-            <Input loading placeholder='Loading...' />
+            <Input style={{margin:'15px'}} iconLeft loading placeholder='Loading...' />
+            <Input style={{margin:'15px'}} loading placeholder='Loading...' />
         </Fragment>
     )
 }

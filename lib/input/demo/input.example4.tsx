@@ -6,8 +6,8 @@ import {Fragment} from 'react';
 export default  function(){
     return(
         <Fragment>
-            <Input error  placeholder='Error...' />
-            <Input success placeholder='Success...' />
+            <Input style={{margin:'15px'}} error  placeholder='Error...' />
+            <Input style={{margin:'15px'}} success placeholder='Success...' />
         </Fragment>
     )
 }

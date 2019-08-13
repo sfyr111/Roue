@@ -15,6 +15,10 @@
      box-shadow: 0 0 5px 0 fade-in($main-focus-color,0.5);
      opacity: 1;
   }
+  &-wrapper{
+    display: inline-flex;
+    align-items: center;
+  }
   &-iconLoading{
     animation : rotate 500ms infinite linear;
   }

@@ -6,7 +6,7 @@ import {Fragment} from 'react';
 export default  function(){
     return(
         <Fragment>
-            <Input  placeholder='Search...'/>
+            <Input style={{margin:'15px'}} placeholder='Search...'/>
         </Fragment>
     )
 }
