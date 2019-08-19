@@ -2,7 +2,7 @@ import * as React from "react";
 import Form, {FormValue} from "../form";
 import {Fragment, useState} from "react";
 import Button from "../../button/button";
-
+import formValidator from "voler-validator-form"
 const FormExample: React.FunctionComponent = () => {
     const [formData, setFormData] = useState<FormValue>({
         username: '',
@@ -28,6 +28,9 @@ const FormExample: React.FunctionComponent = () => {
         //}
 
         */
+       formValidator(formData,[{
+            key:'username',required:true,max:10
+       }],(e)=>console.log(e))
     };
     return (
         <Form

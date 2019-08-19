@@ -3,7 +3,6 @@ import {HTMLAttributes, ReactFragment} from "react";
 import {scopedClassMaker} from "../helper/classes";
 import "./form.scss";
 import Input from "../input/input";
-
 const sc = scopedClassMaker("roue-form");
 
 export interface FormValue {
@@ -37,7 +36,6 @@ const Form: React.FunctionComponent<Props> = (props) => {
         const newFormValue = {...formData, [name]: value};
         onChange(newFormValue);
     };
-
     return (
         <form
             onSubmit={Submit}
