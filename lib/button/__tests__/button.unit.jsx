@@ -1,8 +1,8 @@
-import * as renderer from 'react-test-renderer'
-import * as React from 'react'
-import {mount} from 'enzyme'
+import * as renderer from 'react-test-renderer';
+import * as React from 'react';
+import {mount} from 'enzyme';
 import Button from "../button";
-import ButtonGroup from "../buttonGroup"
+import ButtonGroup from "../buttonGroup";
 
 describe("Button", () => {
     it("button exist", () => {
@@ -20,8 +20,8 @@ describe("Button", () => {
     it("button secondary", () => {
         const component = mount(<Button secondary/>);
         expect(component.find("button").hasClass("roue-button-secondary")).toEqual(true);
-    })
-})
+    });
+});
 
 describe("Form Group", () => {
     it("button Group ", () => {
@@ -32,4 +32,4 @@ describe("Form Group", () => {
         expect(component.find("div").hasClass("roue-buttonGroup")).toEqual(true);
     });
 
-})
+});

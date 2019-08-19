@@ -1,119 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="36" failures="3" time="70.394">
-  <testsuite name="Label" errors="0" failures="0" skipped="0" timestamp="2019-08-19T07:32:40" time="25.997" tests="7">
-    <testcase classname="Label label exist" name="Label label exist" time="0.085">
+<testsuites name="jest tests" tests="36" failures="0" time="12.644">
+  <testsuite name="Input" errors="0" failures="0" skipped="0" timestamp="2019-08-19T08:06:16" time="4.561" tests="7">
+    <testcase classname="Input input exist" name="Input input exist" time="0.124">
     </testcase>
-    <testcase classname="Label label image" name="Label label image" time="0.259">
+    <testcase classname="Input input focus" name="Input input focus" time="0.214">
     </testcase>
-    <testcase classname="Label label imageRight" name="Label label imageRight" time="0.01">
+    <testcase classname="Input input loading" name="Input input loading" time="0.033">
     </testcase>
-    <testcase classname="Label label tag" name="Label label tag" time="0.007">
+    <testcase classname="Input input iconLeft" name="Input input iconLeft" time="0.01">
     </testcase>
-    <testcase classname="Label label ribbon" name="Label label ribbon" time="0.021">
+    <testcase classname="Input input disabled" name="Input input disabled" time="0.01">
     </testcase>
-    <testcase classname="Label label ribbonRight" name="Label label ribbonRight" time="0.018">
+    <testcase classname="Input input error" name="Input input error" time="0.009">
+    </testcase>
+    <testcase classname="Input input success" name="Input input success" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="Dialog" errors="0" failures="0" skipped="0" timestamp="2019-08-19T08:06:16" time="4.759" tests="7">
+    <testcase classname="Dialog alert exist" name="Dialog alert exist" time="0.131">
+    </testcase>
+    <testcase classname="Dialog confirm exist" name="Dialog confirm exist" time="0.016">
+    </testcase>
+    <testcase classname="Dialog modal exist" name="Dialog modal exist" time="0.008">
+    </testcase>
+    <testcase classname="Dialog Dialog visible and exist" name="Dialog Dialog visible and exist" time="0.095">
+    </testcase>
+    <testcase classname="Dialog Dialog header" name="Dialog Dialog header" time="0.017">
+    </testcase>
+    <testcase classname="Dialog Dialog footer" name="Dialog Dialog footer" time="0.014">
+    </testcase>
+    <testcase classname="Dialog Dialog onClose and closeOnClickMask" name="Dialog Dialog onClose and closeOnClickMask" time="0.017">
+    </testcase>
+  </testsuite>
+  <testsuite name="Button" errors="0" failures="0" skipped="0" timestamp="2019-08-19T08:06:16" time="5.473" tests="5">
+    <testcase classname="Button button exist" name="Button button exist" time="0.064">
+    </testcase>
+    <testcase classname="Button button content" name="Button button content" time="0.164">
+    </testcase>
+    <testcase classname="Button button primary" name="Button button primary" time="0.018">
+    </testcase>
+    <testcase classname="Button button secondary" name="Button button secondary" time="0.006">
+    </testcase>
+    <testcase classname="Form Group button Group " name="Form Group button Group " time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="Label" errors="0" failures="0" skipped="0" timestamp="2019-08-19T08:06:21" time="1.16" tests="7">
+    <testcase classname="Label label exist" name="Label label exist" time="0.005">
+    </testcase>
+    <testcase classname="Label label image" name="Label label image" time="0.042">
+    </testcase>
+    <testcase classname="Label label imageRight" name="Label label imageRight" time="0.008">
+    </testcase>
+    <testcase classname="Label label tag" name="Label label tag" time="0.005">
+    </testcase>
+    <testcase classname="Label label ribbon" name="Label label ribbon" time="0.005">
+    </testcase>
+    <testcase classname="Label label ribbonRight" name="Label label ribbonRight" time="0.004">
     </testcase>
     <testcase classname="Label label floating" name="Label label floating" time="0.004">
     </testcase>
   </testsuite>
-  <testsuite name="Input" errors="0" failures="0" skipped="0" timestamp="2019-08-19T07:32:40" time="29.66" tests="7">
-    <testcase classname="Input input exist" name="Input input exist" time="0.297">
+  <testsuite name="Layout" errors="0" failures="0" skipped="0" timestamp="2019-08-19T08:06:21" time="1.089" tests="2">
+    <testcase classname="Layout layout exist " name="Layout layout exist " time="0.009">
     </testcase>
-    <testcase classname="Input input focus" name="Input input focus" time="0.401">
-    </testcase>
-    <testcase classname="Input input loading" name="Input input loading" time="0.041">
-    </testcase>
-    <testcase classname="Input input iconLeft" name="Input input iconLeft" time="0.008">
-    </testcase>
-    <testcase classname="Input input disabled" name="Input input disabled" time="0.026">
-    </testcase>
-    <testcase classname="Input input error" name="Input input error" time="0.009">
-    </testcase>
-    <testcase classname="Input input success" name="Input input success" time="0.007">
+    <testcase classname="Layout layout hasAside " name="Layout layout hasAside " time="0.07">
     </testcase>
   </testsuite>
-  <testsuite name="Dialog" errors="0" failures="0" skipped="0" timestamp="2019-08-19T07:32:40" time="30.698" tests="7">
-    <testcase classname="Dialog alert exist" name="Dialog alert exist" time="0.189">
-    </testcase>
-    <testcase classname="Dialog confirm exist" name="Dialog confirm exist" time="0.076">
-    </testcase>
-    <testcase classname="Dialog modal exist" name="Dialog modal exist" time="0.01">
-    </testcase>
-    <testcase classname="Dialog Dialog visible and exist" name="Dialog Dialog visible and exist" time="0.255">
-    </testcase>
-    <testcase classname="Dialog Dialog header" name="Dialog Dialog header" time="0.117">
-    </testcase>
-    <testcase classname="Dialog Dialog footer" name="Dialog Dialog footer" time="0.163">
-    </testcase>
-    <testcase classname="Dialog Dialog onClose and closeOnClickMask" name="Dialog Dialog onClose and closeOnClickMask" time="0.096">
-    </testcase>
-  </testsuite>
-  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2019-08-19T07:33:06" time="4.808" tests="6">
-    <testcase classname="classes accept one ClassName" name="classes accept one ClassName" time="0.009">
+  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2019-08-19T08:06:21" time="0.816" tests="6">
+    <testcase classname="classes accept one ClassName" name="classes accept one ClassName" time="0.003">
     </testcase>
     <testcase classname="classes accept two ClassName" name="classes accept two ClassName" time="0.001">
     </testcase>
     <testcase classname="classes accept undefined ClassName" name="classes accept undefined ClassName" time="0.001">
     </testcase>
-    <testcase classname="classes accept mixed ClassName" name="classes accept mixed ClassName" time="0.002">
+    <testcase classname="classes accept mixed ClassName" name="classes accept mixed ClassName" time="0">
     </testcase>
     <testcase classname="classes accept none ClassName" name="classes accept none ClassName" time="0.001">
     </testcase>
-    <testcase classname="scopedClassMaker 接受字符串或对象" name="scopedClassMaker 接受字符串或对象" time="0.005">
+    <testcase classname="scopedClassMaker 接受字符串或对象" name="scopedClassMaker 接受字符串或对象" time="0.003">
     </testcase>
   </testsuite>
-  <testsuite name="Icon" errors="0" failures="0" skipped="0" timestamp="2019-08-19T07:33:11" time="3.813" tests="2">
-    <testcase classname="Icon icon exist" name="Icon icon exist" time="0.073">
+  <testsuite name="Icon" errors="0" failures="0" skipped="0" timestamp="2019-08-19T08:06:22" time="0.642" tests="2">
+    <testcase classname="Icon icon exist" name="Icon icon exist" time="0.003">
     </testcase>
-    <testcase classname="Icon onClick can run " name="Icon onClick can run " time="0.402">
-    </testcase>
-  </testsuite>
-  <testsuite name="Button" errors="0" failures="3" skipped="0" timestamp="2019-08-19T07:33:10" time="6.206" tests="5">
-    <testcase classname="Button button exist" name="Button button exist" time="0.102">
-    </testcase>
-    <testcase classname="Button button content" name="Button button content" time="0.281">
-      <failure>Error: Method “text” is meant to be run on 1 node. 0 found instead.
-    at ReactWrapper.single (/Users/mattison/Desktop/Roue/node_modules/enzyme/build/ReactWrapper.js:1718:17)
-    at ReactWrapper.text (/Users/mattison/Desktop/Roue/node_modules/enzyme/build/ReactWrapper.js:862:21)
-    at Object.text (/Users/mattison/Desktop/Roue/lib/button/__tests__/button.unit.jsx:14:45)
-    at Object.asyncJestTest (/Users/mattison/Desktop/Roue/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
-    at resolve (/Users/mattison/Desktop/Roue/node_modules/jest-jasmine2/build/queueRunner.js:43:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/Users/mattison/Desktop/Roue/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
-    at promise.then (/Users/mattison/Desktop/Roue/node_modules/jest-jasmine2/build/queueRunner.js:73:41)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
-    </testcase>
-    <testcase classname="Button button primary" name="Button button primary" time="0.015">
-      <failure>Error: Method “hasClass” is meant to be run on 1 node. 0 found instead.
-    at ReactWrapper.single (/Users/mattison/Desktop/Roue/node_modules/enzyme/build/ReactWrapper.js:1718:17)
-    at ReactWrapper.hasClass (/Users/mattison/Desktop/Roue/node_modules/enzyme/build/ReactWrapper.js:1333:21)
-    at Object.hasClass (/Users/mattison/Desktop/Roue/lib/button/__tests__/button.unit.jsx:18:44)
-    at Object.asyncJestTest (/Users/mattison/Desktop/Roue/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
-    at resolve (/Users/mattison/Desktop/Roue/node_modules/jest-jasmine2/build/queueRunner.js:43:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/Users/mattison/Desktop/Roue/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
-    at promise.then (/Users/mattison/Desktop/Roue/node_modules/jest-jasmine2/build/queueRunner.js:73:41)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
-    </testcase>
-    <testcase classname="Button button secondary" name="Button button secondary" time="0.008">
-      <failure>Error: Method “hasClass” is meant to be run on 1 node. 0 found instead.
-    at ReactWrapper.single (/Users/mattison/Desktop/Roue/node_modules/enzyme/build/ReactWrapper.js:1718:17)
-    at ReactWrapper.hasClass (/Users/mattison/Desktop/Roue/node_modules/enzyme/build/ReactWrapper.js:1333:21)
-    at Object.hasClass (/Users/mattison/Desktop/Roue/lib/button/__tests__/button.unit.jsx:22:44)
-    at Object.asyncJestTest (/Users/mattison/Desktop/Roue/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
-    at resolve (/Users/mattison/Desktop/Roue/node_modules/jest-jasmine2/build/queueRunner.js:43:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/Users/mattison/Desktop/Roue/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
-    at promise.then (/Users/mattison/Desktop/Roue/node_modules/jest-jasmine2/build/queueRunner.js:73:41)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
-    </testcase>
-    <testcase classname="Form Group button Group " name="Form Group button Group " time="0.066">
-    </testcase>
-  </testsuite>
-  <testsuite name="Layout" errors="0" failures="0" skipped="0" timestamp="2019-08-19T07:33:11" time="7.09" tests="2">
-    <testcase classname="Layout layout exist " name="Layout layout exist " time="0.036">
-    </testcase>
-    <testcase classname="Layout layout hasAside " name="Layout layout hasAside " time="0.088">
+    <testcase classname="Icon onClick can run " name="Icon onClick can run " time="0.021">
     </testcase>
   </testsuite>
 </testsuites>
