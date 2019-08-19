@@ -1,7 +1,7 @@
 {
   "name": "roue",
-  "version": "1.0.2",
-  "description": "React wheel",
+  "version": "1.0.3",
+  "description": "the React UI framework",
   "main": "dist/lib/index",
   "types": "dist/lib/index",
   "files": [
