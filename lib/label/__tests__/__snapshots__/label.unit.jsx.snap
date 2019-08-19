@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label label exist 1`] = `
+<div
+  className="roue-label"
+/>
+`;

@@ -11,15 +11,15 @@ describe("Button", () => {
     });
     it("button content", () => {
         const component1 = mount(<Button content={"123455"}/>);
-        expect(component1.find("form.scss").text()).toEqual("123455");
+        expect(component1.find("button").text()).toEqual("123455");
     });
     it("button primary", () => {
         const component = mount(<Button primary/>);
-        expect(component.find("form.scss").hasClass("roue-button-primary")).toEqual(true);
+        expect(component.find("button").hasClass("roue-button-primary")).toEqual(true);
     });
     it("button secondary", () => {
         const component = mount(<Button secondary/>);
-        expect(component.find("form.scss").hasClass("roue-button-secondary")).toEqual(true);
+        expect(component.find("button").hasClass("roue-button-secondary")).toEqual(true);
     })
 })
 

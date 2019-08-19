@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input input exist 1`] = `
+<div
+  className="roue-input-wrapper"
+>
+  
+  <input
+    className="roue-input"
+    disabled={false}
+    type="text"
+  />
+  
+</div>
+`;
