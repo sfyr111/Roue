@@ -1,45 +1,71 @@
 @import "lib/helper";
-*{ margin: 0; padding: 0; box-sizing: border-box ;}
-*:after,*:before{ box-sizing: border-box; }
-ul,ol{list-style: none}
-a{text-decoration: none}
-.example-{
+
+* { margin: 0; padding: 0; box-sizing: border-box;}
+
+*:after, *:before { box-sizing: border-box; }
+
+ul, ol {list-style: none}
+
+a {text-decoration: none}
+
+.prism-code {
+  padding: 20px;
+}
+
+.example- {
   font-weight: normal;
-  &main{ min-height: 100vh;}
-  &header{ font-size: 18px; font-family: "Arial Black", Helvetica, monospace ; font-weight: 600 ; display: flex;
-    align-items: center; background: #FFFFFF; border-bottom: 1px solid  #EEEEEE;
+  
+  &main { min-height: 100vh;}
+  
+  &header { font-size: 18px; font-family: "Arial Black", Helvetica, monospace; font-weight: 600; display: flex;
+    align-items: center; background: #FFFFFF; border-bottom: 1px solid #EEEEEE;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);z-index: 2;
-    >img{ height: 55px; margin: 0 20px; }
-    &Icons{margin-left: auto; margin-right: 10px;
-      >svg{ cursor: pointer; margin: 0 10px; }
+    
+    > img { height: 55px; margin: 0 20px; }
+    
+    &Icons {margin-left: auto; margin-right: 10px;
+      
+      > svg { cursor: pointer; margin: 0 10px; }
     }
   }
-  &aside{
+  
+  &aside {
     color: white; min-width: 230px; font-size: 14px; font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    &Wrapper{
-       background: black;
+    
+    &Wrapper {
+      background: black;
       height: 100%;
-      >ul>li>a.active,.example-asideLable>a:active{ color: black;font-weight: bold; transition: 0.3s; background: #ccc; border-radius: 4px; }
-      >ul>li>a:hover ,.example-asideLable>a:hover{ color: black;transition: 0.3s; background: #ccc; border-radius: 4px; }
-      >ul>li>a{ color: white; display: block; padding: 10px 0 10px 30px; }
+      
+      > ul > li > a.active, .example-asideLable > a:active { color: black;font-weight: bold; transition: 0.3s; background: #ccc; border-radius: 4px; }
+      
+      > ul > li > a:hover, .example-asideLable > a:hover { color: black;transition: 0.3s; background: #ccc; border-radius: 4px; }
+      
+      > ul > li > a { color: white; display: block; padding: 10px 0 10px 30px; }
     }
-    &Logo{padding:15px 10px; font-weight: 600; letter-spacing: 1px;}
-    &Lable{
-        font-weight: 600;
-      >a{
+    
+    &Logo {padding: 15px 10px; font-weight: 600; letter-spacing: 1px;}
+    
+    &Lable {
+      font-weight: 600;
+      
+      > a {
         padding: 13px 0 13px 10px;
         display: block;
         color: white;
       }
     }
   }
-  &component-lable{
-    font-weight: 100; padding:10px 0 10px 20px ; color: #cccccc;
+  
+  &component-lable {
+    font-weight: 100; padding: 10px 0 10px 20px; color: #cccccc;
   }
-  &asideRight{
+  
+  &asideRight {
     min-width: 200px;
-    &-card{ font-family: $main-font-family; width: 100%; position: fixed; top: 130px; }
+    
+    &-card { font-family: $main-font-family; width: 100%; position: fixed; top: 130px; }
   }
-  &content{ padding: 15px;}
+  
+  &content { padding: 15px;}
 }
 

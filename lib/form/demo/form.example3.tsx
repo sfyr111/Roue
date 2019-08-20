@@ -11,8 +11,8 @@ const FormExample3: React.FunctionComponent = () => {
         password: ''
     });
     const [fields] = useState([
-        {name: 'username', label: '营业执照号码:', input: {type: 'text'}},
-        {name: 'password', label: '密码:', input: {type: 'password'}},
+        {name: 'username', label: 'username:', input: {type: 'text'}},
+        {name: 'password', label: 'password:', input: {type: 'password'}},
     ]);
     const [errors, setErrors] = useState({});
     const info = {

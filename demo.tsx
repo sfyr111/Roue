@@ -11,7 +11,7 @@ const Demo: React.FunctionComponent<Props> = (props) => {
     const [codeVisible, setCodeVisible] = useState(false);
     const [IconState, setIconState] = useState(false)
     const code = (
-        <Highlight {...defaultProps} code={props.code} language="jsx">
+        <Highlight {...defaultProps} code={props.code} language="jsx" >
             {({className, style, tokens, getLineProps, getTokenProps}) => (
                 <pre className={className} style={style}>
               {tokens.map((line, i) => (
@@ -26,7 +26,7 @@ const Demo: React.FunctionComponent<Props> = (props) => {
         </Highlight>
     );
     return (
-        <div>
+        <div >
             {props.children}
             <div style={{textAlign: "right", margin: "0 15px"}}>
                 <Icon className={"IconTrigger"} name={IconState ? "code" : "code.off"}
