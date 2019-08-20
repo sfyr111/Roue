@@ -14,5 +14,7 @@ export {message} from "./message/message";
 export {default as Popover} from "./popover/popover";
 export {default as Switch} from "./switch/switch";
 export {default as Tabs , TabsPane, TabsItems , TabsBody, TabsHead} from "./tabs/tabs";
+export {default as Form} from "./form/form"
+export {default as formValidator} from "./form/validator"
 
 import './index.scss';

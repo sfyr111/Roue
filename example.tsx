@@ -3,7 +3,6 @@ import * as ReactDom from 'react-dom';
 import {HashRouter as Router, Route, NavLink} from 'react-router-dom';
 import {Layout, Header, Content, Aside} from "./lib/layout/layout";
 import InputDemo from "./lib/input/demo/input.demo";
-
 const logo = require('./logo.png');
 import "./example.scss";
 import {Icon} from "./lib";
