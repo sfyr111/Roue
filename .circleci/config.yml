@@ -40,7 +40,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - run: yarn ci
+      - run: yarn test
       - store_test_results:
           path: test-results
 

@@ -8208,11 +8208,6 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-voler-validator-form@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/voler-validator-form/-/voler-validator-form-1.0.0.tgz#ca05887daf8768fc292b7b0374a63265181fc978"
-  integrity sha512-MnXeE6+R4YbcU+5E2UCjyqHOY/eKwro8UB30tnFa0+d/mxgwMoZMBbv57RkSFZPJWMU4OlBpxUkOJQLFKz8Kxw==
-
 w3c-hr-time@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/w3c-hr-time/-/w3c-hr-time-1.0.1.tgz#82ac2bff63d950ea9e3189a58a65625fedf19045"

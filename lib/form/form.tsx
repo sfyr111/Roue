@@ -3,6 +3,7 @@ import {HTMLAttributes, ReactFragment} from "react";
 import {scopedClassMaker} from "../helper/classes";
 import "./form.scss";
 import Input from "../input/input";
+
 const sc = scopedClassMaker("roue-form");
 
 export interface FormValue {
@@ -11,11 +12,13 @@ export interface FormValue {
 
 interface Props extends HTMLAttributes<HTMLFormElement> {
     value: FormValue
-    fields: Array<{ name: string, label: string, input: { type: string } }>
+    fields: Array<{ name: string, label?: string, input: { type: string }, placeholder?: string }>
     buttons: ReactFragment,
-    errors: { [K: string]: string[] },
+    errors?: { [K: string]: string[] },
     onChange: (value: FormValue) => void,
-    onSubmit: React.FormEventHandler<HTMLFormElement>
+    onSubmit?: React.FormEventHandler<HTMLFormElement>,
+    errorsDisplayMode?: 'first' | 'all',
+    inline?: boolean
 }
 
 const Form: React.FunctionComponent<Props> = (props) => {
@@ -26,11 +29,14 @@ const Form: React.FunctionComponent<Props> = (props) => {
         onSubmit,
         onChange,
         buttons,
+        errors,
+        errorsDisplayMode,
+        inline,
         ...rest
     } = props;
     const Submit: React.FormEventHandler<HTMLFormElement> = (e) => {
         e.stopPropagation();
-        onSubmit(e);
+        onSubmit && onSubmit(e);
     };
     const onInputChange = (name: string, value: string) => {
         const newFormValue = {...formData, [name]: value};
@@ -42,25 +48,34 @@ const Form: React.FunctionComponent<Props> = (props) => {
             className={sc({"": true}, {extra: className})}
             {...rest}
         >
-            <table>
-                <tbody>
+            <table className={"roue-form-table"}>
+                <tbody className={inline ? "roue-form-tbody-inline" : "roue-form-tbody"}>
                 {fields.map(field =>
-                    <tr className="roue-form-tr"  key={field.name}>
-                        <td className="roue-form-td">
-                            <span>{field.label}</span>
-                        </td>
-                        <td className="roue-form-td">
+                    <tr className={"roue-form-tr"} key={field.name}>
+                        {field.label && <td className={"roue-form-td"}>
+                            <span className={"roue-form-label"}>{field.label}</span>
+                        </td>}
+                        <td className={"roue-form-td"}>
                             <Input
                                 type={field.input.type}
                                 value={formData[field.name]}
+                                placeholder={field.placeholder}
                                 onChange={(e) => onInputChange(field.name, e.target.value)}
                             />
+                            {errors && <div className={"roue-form-error"}>
+                                {errors[field.name] ?
+                                    (errorsDisplayMode === 'first' ?
+                                        errors[field.name][0] :
+                                        errors[field.name].join()) :
+                                    <span>&nbsp;</span>}
+                            </div>}
                         </td>
                     </tr>
                 )}
-                <tr className="roue-form-tr" >
-                    <td className="roue-form-td" />
-                    <td className="roue-form-td" >{buttons}</td>
+                <tr className={"roue-form-tr"}>
+                    {!inline &&
+                    <td className={"roue-form-td"}/>}
+                    <td className={"roue-form-td roue-form-buttons"}>{buttons}</td>
                 </tr>
                 </tbody>
             </table>

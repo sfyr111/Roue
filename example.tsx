@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import {HashRouter as Router, Route, NavLink} from 'react-router-dom';
-import {Layout, Header, Footer, Content, Aside} from "./lib/layout/layout";
+import {Layout, Header, Content, Aside} from "./lib/layout/layout";
 import InputDemo from "./lib/input/demo/input.demo";
 
 const logo = require('./logo.png');
@@ -32,7 +32,7 @@ ReactDom.render(
                 <img src={logo} alt="Logo"/>
                 <span>Roue</span>
                 <div className={"example-headerIcons"}>
-                    <a href="https://github.com/mattisonzhao/Roue-Website">
+                    <a href="https://github.com/mattisonzhao/Roue">
                         <Icon name={"github"}/>
                     </a>
                 </div>
@@ -130,9 +130,6 @@ ReactDom.render(
                             <Route path="/roue/components/tabs" component={TabsDemo}/>
                             <Route path="/roue/components/switch" component={SwitchDemo}/>
                             <Route path="/roue/components/form" component={FormDemo}/>
-                            <Footer className={"example-footer"}>
-                                <span>©Mattison</span>
-                            </Footer>
                         </Content>
                     </Layout>
                 );

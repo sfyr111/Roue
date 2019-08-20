@@ -15,7 +15,6 @@ a{text-decoration: none}
     }
   }
   &aside{
-    overflow: scroll;
     color: white; min-width: 230px; font-size: 14px; font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     &Wrapper{
        background: black;
@@ -41,7 +40,6 @@ a{text-decoration: none}
     min-width: 200px;
     &-card{ font-family: $main-font-family; width: 100%; position: fixed; top: 130px; }
   }
-  &content{ padding: 15px; position: relative}
-  &footer{ font-size: 14px; display: flex; justify-content: center; position: absolute; bottom: 10px ;left: 50%;transform: translateX(-50%)}
+  &content{ padding: 15px;}
 }
 
