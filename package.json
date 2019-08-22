@@ -15,7 +15,7 @@
     "ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT=./test-results/jest/results.xml jest --config=jest.config.ci.js"
   },
   "repository": "git@github.com:mattisonzhao/Roue.git",
-  "author": "mattisonZhao <mattison@yeah.net>",
+  "author": "mattisonZhao <mattison@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "react": "^16.8.6",
