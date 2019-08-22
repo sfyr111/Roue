@@ -10,7 +10,6 @@ describe("Affix", () => {
     });
     it("affix content", () => {
         const component = mount(<Affix>12345</Affix>);
-
         expect(component.find(".roue-affix").text()).toEqual("12345");
     });
   /*  it("affix fixed", () => {
