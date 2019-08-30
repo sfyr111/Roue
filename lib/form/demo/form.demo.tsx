@@ -26,28 +26,28 @@ const FormDemo = () => {
             <Container className={"wrapper"}>
                 <h3>Login Form</h3>
                 <p className={"introduce"}>Normal login form which can contain more elements.</p>
-                <Demo code={require('!!raw-loader!./form.example1.tsx').default}>
+                <Demo code={require('!!raw-loader!./form.example2.tsx').default}>
                     <FormExample2/>
                 </Demo>
             </Container>
             <Container className={"wrapper"}>
                 <h3>Validator</h3>
                 <p className={"introduce"}>You can use validator to check data.</p>
-                <Demo code={require('!!raw-loader!./form.example1.tsx').default}>
+                <Demo code={require('!!raw-loader!./form.example4.tsx').default}>
                     <FormExample4/>
                 </Demo>
             </Container>
             <Container className={"wrapper"}>
                 <h3>Validator one error</h3>
                 <p className={"introduce"}>You can set errorsDisplayMode first to show one error.</p>
-                <Demo code={require('!!raw-loader!./form.example1.tsx').default}>
+                <Demo code={require('!!raw-loader!./form.example5.tsx').default}>
                     <FormExample5/>
                 </Demo>
             </Container>
             <Container className={"wrapper"}>
                 <h3>Async validator</h3>
                 <p className={"introduce"}>Async validator </p>
-                <Demo code={require('!!raw-loader!./form.example1.tsx').default}>
+                <Demo code={require('!!raw-loader!./form.example3.tsx').default}>
                     <FormExample3/>
                 </Demo>
             </Container>
